@@ -1,13 +1,13 @@
 package tbp.unit.testing.mokito;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import tbp.unit.testing.mokito.dao.UserDao;
 import tbp.unit.testing.mokito.service.UserService;
@@ -17,7 +17,8 @@ import tbp.unit.testing.mokito.service.UserService;
  *
  */
 
-@RunWith(SpringRunner.class) // if you are using junit 4
+// if you are using junit 4
+@ExtendWith(SpringExtension.class)
 public class UnitTestingWithMockito {
 
 	@InjectMocks
